@@ -1,0 +1,121 @@
+{
+	"name": "Client",
+	"domain": "J-Sync",
+	"description": "...",
+	"owners": [ "Filippo Boiani", "Nicola Lo Caso", "Ludovico Loreti", "Riccardo Sibani"],
+	"commands": [
+		{
+			"type": "NEGATIVE",
+	    	"id": 0,
+	    	"appearance": ["no", "n", "nope", "0"],
+	    	"arguments": [],
+		    "parameters": [],
+	    	"description": "Espressione negativa."
+	    },
+		{
+		    "type": "AFFIRMATIVE",
+		    "id": 1,
+		    "appearance": ["yes", "si", "y", "s", "ok", "k", "1"],
+		    "arguments": [],
+		    "parameters": [],
+		    "description": "Espressione affermativa."
+	    },
+	    {
+	    	"type": "CLOSE",
+	    	"id": 2,
+	    	"appearance": ["close", "exit", "chiudi", "arresta", "esci", "c"],
+	    	"arguments": [],
+		    "parameters": [],
+	    	"description": "Termina la sessione del processo."
+	    },
+	    {
+	    	"type": "HELP",
+	    	"id": 3,
+	    	"appearance": ["help", "aiuto", "info", "a", "i", "h"],
+	    	"arguments": [],
+		    "parameters": [],
+	    	"description": "Permette di visualizzare la seguente schermata di aiuto."
+	    },
+	    {
+	    	"type": "LIST",
+	    	"id": 4,
+	    	"appearance": ["list", "lista", "ls", "l"],
+	    	"arguments": [
+	    		{
+	    			"name": "SERVERS",
+	    			"commands": ["servers", "server", "-s"],
+	    			"description": "Visualizza la lista dei server registrati."
+	    		},
+	    		{
+	    			"name": "NEW_REPOS",
+	    			"commands": ["new_repos", "newrepos", "new_repo", "newrepo", "server_repo", "-nr"],
+	    			"description": "Visualizza la lista dei repositories disponibili nei server registrati."
+	    		},
+	    		{
+	    			"name": "REG_REPOS",
+	    			"commands": ["reg_repos", "regrepos", "reg_repo", "regrepo", "client_repo", "-rr"],
+	    			"description": "Visualizza la lista dei repositories registrati localmente."
+	    		}
+	    	],
+		    "parameters": [],
+	    	"description": "Visualizza una lista specifica, necessita di un parametro."
+	    },
+	    {
+	    	"type": "SERVER",
+	    	"id": 5,
+	    	"appearance": ["servers", "server", "s"],
+	    	"arguments": [
+	    		{
+	    			"name": "ADD_SERVERS",
+	    			"commands": ["add", "aggiungi", "-a"],
+	    			"parameters": ["serverName", "serverAddress"],
+	    			"description": "Aggiunge un nuovo Server alla lista dei Servers registrati."
+	    		},
+	    		{
+	    			"name": "REM_SERVERS",
+	    			"commands": ["remove", "rem", "rimuovi", "-r", "rm"],
+	    			"parameters": ["serverName"],
+	    			"description": "Rimuove @serverName dai Servers registrati."
+	    		}
+	    	],
+		    "parameters": [],
+	    	"description": "Permette di registrare o rimuovere un server dalla memoria."
+	    },
+	    {
+	    	"type": "REPOSITORY",
+	    	"id": 6,
+	    	"appearance": ["repositories", "repository", "repo", "r"],
+	    	"arguments": [
+	    		{
+	    			"name": "ADD_REPOSITORY",
+	    			"commands": ["add", "-a"],
+	    			"parameters": ["serverName", "repoName", "localPath"],
+	    			"description": "Se @repoName non esiste sul server @serverName, il repository viene creato. Se non esiste, crea la directory @localPath. Infine viene registrato il repository localmente."
+	    		},
+	    		{
+	    			"name": "REM_REPOSITORY",
+	    			"commands": ["remove", "rem", "-r", "rm"],
+	    			"parameters": ["serverName", "repoName"],
+	    			"description": "Rimuove il repository dai repo registrati, cancella il repository @repoName sul server @serverName e la cartella locale corrispondente."
+	    		}	    	],
+		    "parameters": [],
+	    	"description": "Permette di registrare o rimuovere un repository dalla memoria."
+	    },
+	    {
+	    	"type": "PUSH",
+	    	"id": 7,
+	    	"appearance": ["push", "ph"],
+	    	"arguments": [],
+		    "parameters": ["serverName", "repoName"],
+	    	"description": "Push dell’ultima versione di @repoName locale sul server @serverName."
+	    },
+	    {
+	    	"type": "PULL",
+	    	"id": 8,
+	    	"appearance": ["pull", "pl"],
+	    	"arguments": [],
+		    "parameters": ["serverName", "repoName"],
+	    	"description": "Pull dell’ultima versione di @repoName dal server @serverName."
+	    }
+	]
+}
