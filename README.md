@@ -5,20 +5,17 @@ Project of Operating System Lab. University of Bologna
 1.0
 #### Date 
 06/30/2015
-#### Language
+
+### Language
 Jolie Language [http://www.jolie-lang.org/](http://www.jolie-lang.org/)
 
 ## HOWTO:
   + From terminal goto dir with server.ol (or client.ol)
   + Type ````jolie client.ol```` or ````jolie server.ol````
-  + To launch server with a different port from *8001* type:
-    
-    ````jolie -C SERVER_LOCATION=\"socket://localhost:numberPort\" server.ol````
+  + To launch server with a different port from *8001* type: ````jolie -C SERVER_LOCATION=\"socket://localhost:numberPort\" server.ol````
+  + If you'd like to launch more servers, or-and more client, you just copy folders and redo what you have just done.
 
-
-If you'd like to launch more servers, or-and more client, you just copy folders and redo what you have just done.
-
-## Authors
+## Authors
 * **Riccardo Sibani** - *Pina is on Air* - [Pinair](https://github.com/pinair)
 * **Filippo Boiani** - *FiLLLLLo* - [FilippoBoiani](https://github.com/filippoboiani)
 * **Ludovico Loreti** - *n00b* - [LudovicoLoreti](https://github.com/ludovicoloreti)
