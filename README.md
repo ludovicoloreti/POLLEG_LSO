@@ -1,7 +1,12 @@
 # JSYNC POLLEG
 Project of Operating System Lab. University of Bologna
-Version 1.0
-Date 06/30/2015
+
+#### Version 
+1.0
+#### Date 
+06/30/2015
+#### Language
+Jolie Language [http://www.jolie-lang.org/](http://www.jolie-lang.org/)
 
 ## HOWTO:
   + From terminal goto dir with server.ol (or client.ol)
@@ -10,9 +15,10 @@ Date 06/30/2015
     
     ````jolie -C SERVER_LOCATION=\"socket://localhost:numberPort\" server.ol````
 
-If you'd like to launch more servers, or/and more client, you just copy folders and redo what you have just done.
 
-### Authors
+If you'd like to launch more servers, or-and more client, you just copy folders and redo what you have just done.
+
+## Authors
 * **Riccardo Sibani** - *Pina is on Air* - [Pinair](https://github.com/pinair)
 * **Filippo Boiani** - *FiLLLLLo* - [FilippoBoiani](https://github.com/filippoboiani)
 * **Ludovico Loreti** - *n00b* - [LudovicoLoreti](https://github.com/ludovicoloreti)
